@@ -1,19 +1,26 @@
 import Link from "next/link";
-import { navLinks } from "@/lib/data";
 import Button from "@/components/Button";
 import MobileMenu from "@/components/MobileMenu";
 import ThemeToggle from "@/components/ThemeToggle";
+
+const landingLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Results", href: "/#results" },
+  { label: "Services", href: "/services" },
+  { label: "Process", href: "/#process" },
+  { label: "FAQs", href: "/#faqs" },
+];
 
 export default function Navbar() {
   return (
     <header className="site-header">
       <nav className="container nav-shell" aria-label="Primary navigation">
-        <Link href="/" className="wordmark" aria-label="HyperDevo home">
-          <span>HYPERDEVO</span>
-          <small>Creative Digital Agency</small>
+        <Link href="/" className="logo-mark" aria-label="HyperDevo home">
+          <img src="/logo.png" alt="HyperDevo Creative Digital Agency" />
         </Link>
         <div className="desktop-nav">
-          {navLinks.map((link) => (
+          {landingLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               {link.label}
             </Link>
@@ -22,7 +29,7 @@ export default function Navbar() {
         <div className="nav-actions">
           <ThemeToggle />
           <Button href="/contact" className="desktop-cta">
-            Start a Project
+            Book a Call
           </Button>
           <MobileMenu />
         </div>

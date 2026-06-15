@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 export default function PackageCard({ name, bestFor, features, cta, highlighted }: PackagePlan) {
   return (
     <article className={cn("package-card", highlighted && "highlighted")}>
-      {highlighted && <span className="package-badge">Popular</span>}
+      {highlighted && <span className="package-badge">Recommended</span>}
       <h3>{name}</h3>
       <p>{bestFor}</p>
       <ul>

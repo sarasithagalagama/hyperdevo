@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 
 export const metadata: Metadata = {
   title: "HyperDevo | Sri Lankan Creative Digital Agency",
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <Navbar />
         <main>{children}</main>
+        <MobileStickyCTA />
         <Footer />
       </body>
     </html>

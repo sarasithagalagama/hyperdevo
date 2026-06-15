@@ -108,7 +108,7 @@ export const packages: PackagePlan[] = [
   {
     name: "Starter",
     bestFor: "Small businesses starting their online presence.",
-    features: ["Basic website or social media setup", "Brand-aligned design", "Mobile responsive layout", "Contact section", "Basic content support", "Launch guidance"],
+    features: ["Basic website or landing page", "Brand-aligned design", "Mobile responsive layout", "Contact form", "Basic SEO structure", "Launch support"],
     cta: "Request Starter Quote",
   },
   {

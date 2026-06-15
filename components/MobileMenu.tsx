@@ -2,8 +2,18 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { navLinks } from "@/lib/data";
 import Button from "@/components/Button";
+
+const mobileLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Results", href: "/#results" },
+  { label: "Services", href: "/services" },
+  { label: "Process", href: "/#process" },
+  { label: "Packages", href: "/packages" },
+  { label: "FAQs", href: "/#faqs" },
+  { label: "Contact", href: "/contact" },
+];
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,13 +25,13 @@ export default function MobileMenu() {
         <span />
       </button>
       <div className={`mobile-panel ${isOpen ? "open" : ""}`}>
-        {navLinks.map((link) => (
+        {mobileLinks.map((link) => (
           <Link key={link.href} href={link.href} onClick={() => setIsOpen(false)}>
             {link.label}
           </Link>
         ))}
         <Button href="/contact" className="w-full text-center">
-          Let&apos;s Talk
+          Book a Call
         </Button>
       </div>
     </div>

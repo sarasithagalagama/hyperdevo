@@ -6,9 +6,8 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <Link href="/" className="wordmark">
-            <span>HYPERDEVO</span>
-            <small>Digital Solutions Built for Global Growth</small>
+          <Link href="/" className="logo-mark footer-logo" aria-label="HyperDevo home">
+            <img src="/logo.png" alt="HyperDevo Creative Digital Agency" />
           </Link>
           <p>
             HyperDevo is a Sri Lankan creative digital agency offering web development, graphic design, social media management, and digital marketing services for growing businesses.
