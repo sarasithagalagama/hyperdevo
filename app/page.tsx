@@ -2,7 +2,6 @@ import Button from "@/components/Button";
 import ComparisonSection from "@/components/ComparisonSection";
 import CTASection from "@/components/CTASection";
 import FAQAccordion from "@/components/FAQAccordion";
-import HeroDashboardMockup from "@/components/HeroDashboardMockup";
 import PackageCard from "@/components/PackageCard";
 import ProcessStep from "@/components/ProcessStep";
 import ResultsGrid from "@/components/ResultsGrid";
@@ -55,7 +54,6 @@ export default function Home() {
             <span className="stars">★★★★★</span>
             <p>Trusted by growing businesses, startups, and service brands. Built for growing brands.</p>
           </div>
-          <HeroDashboardMockup />
         </div>
       </section>
 

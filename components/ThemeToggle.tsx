@@ -24,9 +24,20 @@ export default function ThemeToggle() {
     document.documentElement.dataset.theme = nextTheme;
   };
 
+  const isLight = mounted && theme === "light";
+
   return (
-    <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label="Toggle color theme" aria-pressed={mounted && theme === "light"}>
-      <span>{mounted && theme === "light" ? "Light" : "Dark"}</span>
+    <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label="Toggle color theme" aria-pressed={isLight} title={isLight ? "Light mode" : "Dark mode"}>
+      {isLight ? (
+        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2.5M12 19.5V22M4.93 4.93 6.7 6.7M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07 6.7 17.3M17.3 6.7l1.77-1.77" />
+        </svg>
+      ) : (
+        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+          <path d="M20.5 14.6A7.8 7.8 0 0 1 9.4 3.5a8.8 8.8 0 1 0 11.1 11.1Z" />
+        </svg>
+      )}
     </button>
   );
 }

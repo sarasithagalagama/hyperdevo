@@ -182,11 +182,21 @@ textarea:focus-visible {
 }
 
 .theme-toggle {
-  min-height: 42px;
-  padding: 0 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.72rem;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .menu-button {
@@ -1717,6 +1727,7 @@ body {
   }
 
   .theme-toggle {
-    padding-inline: 11px;
+    width: 40px;
+    height: 40px;
   }
 }
